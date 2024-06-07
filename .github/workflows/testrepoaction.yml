@@ -1,4 +1,4 @@
-nname: Example workflow for Maven (3-jdk-11) using Snyk
+name: Example workflow for Maven (3-jdk-11) using Snyk
 on: push
 jobs:
   security:
