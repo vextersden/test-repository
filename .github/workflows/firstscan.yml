@@ -9,19 +9,7 @@ jobs:
         run: echo "perform the SAST Scan"
         
         
-    SCA:
-     runs-on: ubuntu-latest
-    steps:
-      - name: Print a line for SCA scan
-        run: echo "perform the SCA Scan"
-    CONTAINER SCAN:
-     runs-on: ubuntu-latest
-    steps:
-      - name: Print a line for container scan
-        run: echo "perform the Container Scan"
-    
-
-        
+      
   snyk:
     permissions:
       contents: read # for actions/checkout to fetch code
