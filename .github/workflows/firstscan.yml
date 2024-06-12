@@ -1,7 +1,7 @@
 name: First Work flow
 
 on: workflow_dispatch
-  job:
+jobs:
    SAST:
     runs-on: ubuntu-latest
     steps:
