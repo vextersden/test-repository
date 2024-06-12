@@ -1,30 +1,27 @@
 name: First Work flow
 on: push
 jobs:
-   
-      
-
        
 
        
- SAST:
+  SAST:
     runs-on: ubuntu-latest
     steps:
       - name: Print a line
         run: echo "perform the SAST Scan"
 
-SCA:
+  SCA:
     runs-on: ubuntu-latest
     steps:
       - name: Print a line
         run: echo "perform the SCA Scan"
 
-Container scan:
+     Container scan:
     runs-on: ubuntu-latest
     steps:
       - name: Print a line
         run: echo "perform the Container Scan"
-IAC scan :
+     IAC scan :
     runs-on: ubuntu-latest
     steps:
       - name: Print a line
