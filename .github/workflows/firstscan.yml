@@ -34,7 +34,7 @@ jobs:
         # Push the Snyk Code results into GitHub Code Scanning tab
       
 
-jobs:
+      jobs:
    SAST:
     runs-on: ubuntu-latest
     steps:
