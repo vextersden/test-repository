@@ -17,8 +17,7 @@
 # and fail PR checks, see https://github.com/snyk/actions/
 
 # for actions/checkout to fetch code
-      security-eventname: Snyk Security
-
+name: Snyk Security
 on: push
     
 
