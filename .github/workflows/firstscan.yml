@@ -1,16 +1,6 @@
 name: First Work flow
 on: push
-
-jobs:
-   SAST:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print a line
-        run: echo "perform the SAST Scan"
-        
-        
-      
-  snyk:
+   snyk:
     permissions:
       contents: read # for actions/checkout to fetch code
       security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
@@ -45,3 +35,10 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: snyk-code.sarif
+
+          jobs:
+   SAST:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a line
+        run: echo "perform the SAST Scan"
