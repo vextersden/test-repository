@@ -24,8 +24,7 @@ jobs:
      runs-on: ubuntu-latest
     steps:
       - name: Print a line fir IAC SCAN
-        run: echo "perform the IAC Scan"
-  
+        run: echo "perform the IAC Scan"  
   snyk:
     permissions:
       contents: read # for actions/checkout to fetch code
