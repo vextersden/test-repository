@@ -9,7 +9,6 @@ jobs:
         run: echo "perform the SAST Scan"
         
         
-      - run: 
     SCA:
      runs-on: ubuntu-latest
     steps:
