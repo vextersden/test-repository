@@ -19,13 +19,7 @@ jobs:
     steps:
       - name: Print a line for container scan
         run: echo "perform the Container Scan"
-    IAC:
-     runs-on: ubuntu-latest
-    steps:
-      - name: Print a line fir IAC SCAN
-        run: echo "perform the IAC Scan" 
-
-
+    
 
         
   snyk:
