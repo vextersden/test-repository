@@ -3,7 +3,7 @@ on: push
 jobs:      
 
        
-    SAST:
+      SAST:
     runs-on: ubuntu-latest
     steps:
       - name: Print a line
