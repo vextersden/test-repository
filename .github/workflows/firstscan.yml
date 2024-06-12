@@ -1,5 +1,6 @@
 name: First Work flow
 on: push
+jobs:
    snyk:
     permissions:
       contents: read # for actions/checkout to fetch code
