@@ -7,8 +7,28 @@ jobs:
        
 
        
-   SAST:
+ SAST:
     runs-on: ubuntu-latest
     steps:
       - name: Print a line
         run: echo "perform the SAST Scan"
+
+SCA:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a line
+        run: echo "perform the SCA Scan"
+
+Container scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a line
+        run: echo "perform the Container Scan"
+IAC scan :
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a line
+        run: echo "perform the IAC Scan"
+
+
+
