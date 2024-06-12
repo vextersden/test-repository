@@ -19,11 +19,8 @@
 # for actions/checkout to fetch code
       security-eventname: Snyk Security
 
-on:
-  push:
-    branches: ["main" ]
-  pull_request:
-    branches: ["main"]
+on: push
+    
 
 permissions:
   contents: read
