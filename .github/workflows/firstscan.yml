@@ -15,12 +15,12 @@ jobs:
       - name: Print a line
         run: echo "perform the SCA Scan"
 
-  Container scan:
+  Container_scan:
     runs-on: ubuntu-latest
     steps:
       - name: Print a line
         run: echo "perform the Container Scan"
-  IAC scan :
+  IAC_scan :
     runs-on: ubuntu-latest
     steps:
       - name: Print a line
