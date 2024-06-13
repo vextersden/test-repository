@@ -8,7 +8,7 @@ jobs:
     - uses: snyk/actions/setup@master
         
     - name: Snyk code test
-      run: snyk code test  --json --project-name="publishscan"
+      run: snyk code test --org=871b2fee-982f-40ba-988a-20dceb37a2af
       continue-on-error: true
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
