@@ -6,6 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - uses: snyk/actions/setup@master
+    continue-on-error: true
     
     - name: Snyk code test
       run: snyk code test
