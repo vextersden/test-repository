@@ -1,4 +1,4 @@
-name: First Work flow
+name: First Work Flow
 on: push
 jobs:      
 
