@@ -8,7 +8,7 @@ jobs:
     - uses: snyk/actions/setup@master
         
     - name: Output Snyk code test
-      run: snyk code test --json > output-file.json
+      run: snyk code test --json > test-repository
       continue-on-error: true
 
       env:
