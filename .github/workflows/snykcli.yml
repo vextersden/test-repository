@@ -14,7 +14,6 @@ jobs:
       uses: actions/upload-artifact@v3
         with:
           name: SAST-file
-          path: |
-          test
+          path: test
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
