@@ -11,7 +11,7 @@ jobs:
       run: snyk code test 
       continue-on-error: true
     - name: Output Snyk code test
-      run: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3
         with:
           name: SAST-file
           path: |
