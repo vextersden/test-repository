@@ -8,12 +8,8 @@ jobs:
     - uses: snyk/actions/setup@master
         
     - name: Output Snyk code test
-      run: snyk code test 
+      run: snyk code test --json-file-output=/home/runner/work/test-repository/test-repository/output-file.json
       continue-on-error: true
-    - name: Output Snyk code test
-      uses: actions/upload-artifact@v3
-        with:
-          name: SAST-file
-          path: test
+
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
