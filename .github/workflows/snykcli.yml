@@ -7,8 +7,14 @@ jobs:
     - uses: actions/checkout@master
     - uses: snyk/actions/setup@master
         
-    - name: Snyk code test
-      run: snyk code test --json-file-output=viveksjson
+    - name: Output Snyk code test
+      run: snyk code test 
       continue-on-error: true
+    - name: Output Snyk code test
+      run: actions/upload-artifact@v3
+        with:
+          name: SAST-file
+          path: |
+          test
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
