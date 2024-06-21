@@ -11,8 +11,8 @@ jobs:
       run:  snyk code test --json-file-output=vuln.json 
       continue-on-error: true
 
-     - name: Snyk Open Source monitor
-        run: snyk monitor --all-projects
+    - name: Snyk Open Source monitor
+      run: snyk monitor --all-projects
 
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
