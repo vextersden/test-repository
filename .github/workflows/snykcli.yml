@@ -8,7 +8,7 @@ jobs:
     - uses: snyk/actions/setup@master
         
     - name: Output Snyk code test
-      run:  snyk code test 
+      run:  snyk code test --json-file-output=vuln.json 
       continue-on-error: true
 
       env:
