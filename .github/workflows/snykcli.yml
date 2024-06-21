@@ -8,10 +8,7 @@ jobs:
     - uses: snyk/actions/setup@master
         
     - name: Output Snyk code test
-      run: |
-        dir
-        snyk code test --sarif > snyk-code.sarif # || true
-        dir
+      run:  snyk code test 
       continue-on-error: true
 
       env:
