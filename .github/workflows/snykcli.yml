@@ -22,6 +22,6 @@ jobs:
       with:
         name: my-artifact
         path: |
-          path/to/artifact/world.txt
+          path/to/artifact/vex.json
           home/runner/work
          
