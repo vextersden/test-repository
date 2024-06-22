@@ -11,6 +11,9 @@ jobs:
     - uses: actions/checkout@master
     - uses: snyk/actions/setup@master        
     - name: Output Snyk code test
+    env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
       run: |
        snyk auth
        snyk code test --json-file-output=vuln.json 
