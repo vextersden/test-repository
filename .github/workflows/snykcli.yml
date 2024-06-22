@@ -1,7 +1,7 @@
 name: Snyk example 
 on: push
 jobs:
-  security:
+ security:
     runs-on: ubuntu-latest
     env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
