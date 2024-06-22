@@ -8,7 +8,10 @@ jobs:
     - uses: snyk/actions/setup@master
         
     - name: Output Snyk code test
+      run: snyk auth
       run:  snyk code test --json-file-output=vuln.json 
+    - name: upload test result
+      uses:
       continue-on-error: true
 
     - name: Snyk Open Source monitor
