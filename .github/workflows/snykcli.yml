@@ -10,6 +10,15 @@ jobs:
     - name: Output Snyk code test
       run:  snyk code test 
       continue-on-error: true
-
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    - name: upload
+      run: |
+        mkdir -p path/to/artifact
+        echo hello > path/to/artifact/world.txt
+
+    - name: execute upload with
+      uses: actions/upload-artifact@v4
+      with:
+      name: my-artifact
+      path: path/to/artifact/world.txt
