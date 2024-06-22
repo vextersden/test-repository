@@ -5,8 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: snyk/actions/setup@master
-        
+    - uses: snyk/actions/setup@master        
     - name: Output Snyk code test
       run: |
        snyk auth
