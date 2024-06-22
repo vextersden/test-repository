@@ -8,8 +8,9 @@ jobs:
     - uses: snyk/actions/setup@master
         
     - name: Output Snyk code test
-      run: snyk auth
-      run:  snyk code test --json-file-output=vuln.json 
+      run: |
+       snyk auth
+       snyk code test --json-file-output=vuln.json 
     - name: upload test result
       run: mkdir -p path/to/artifact
       run: echo hello > path/to/artifact/world.txt
