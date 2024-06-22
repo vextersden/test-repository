@@ -1,7 +1,7 @@
 name: Snyk example 
 on: push
 jobs: 
-  security:
+  name: security
     runs-on: ubuntu-latest    
     steps:
     env:
