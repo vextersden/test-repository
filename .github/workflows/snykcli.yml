@@ -11,7 +11,7 @@ jobs:
        snyk auth
        snyk code test --json-file-output=vuln.json 
     - name: upload test result
-      run:|
+      run: |
        echo hello > path/to/artifact/world.txt
        mkdir -p path/to/artifact
       run: 
