@@ -1,11 +1,9 @@
 name: Snyk example 
 on: push
 jobs: 
-  name: security
-  runs-on: ubuntu-latest    
-    steps:
-    env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+  security:
+    runs-on: ubuntu-latest    
+    steps:    
     - uses: actions/checkout@master
     - uses: snyk/actions/setup@master        
     - name: Output Snyk code test
