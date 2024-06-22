@@ -8,7 +8,7 @@ jobs:
     - uses: snyk/actions/setup@master
         
     - name: Output Snyk code test
-      run:  snyk code test 
+      run:  snyk code test --json-file-output=path/to/artifact/vex.json
       continue-on-error: true
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
@@ -22,5 +22,6 @@ jobs:
       with:
         name: my-artifact
         path: |
-         home/runner/work
+          path/to/artifact/world.txt
+          home/runner/work
          
