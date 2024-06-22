@@ -1,32 +1,15 @@
 name: Snyk example 
 on: push
-jobs: 
+jobs:
   security:
-    runs-on: ubuntu-latest    
-    steps:    
+    runs-on: ubuntu-latest
+    steps:
     - uses: actions/checkout@master
-    - uses: snyk/actions/setup@master        
+    - uses: snyk/actions/setup@master
+        
     - name: Output Snyk code test
-    env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-
-      run: |
-       snyk auth
-       snyk code test --json-file-output=vuln.json 
-    - name: make directory
-      run: |
-       echo hello > path/to/artifact/world.txt
-       mkdir -p path/to/artifact
-    
-    - name: upload      
-      uses: actions/upload-artifact@v4
-      with:
-        name: my-artifact
-        path: path/to/artifact/world.txt
-      
+      run:  snyk code test 
       continue-on-error: true
 
-    ##- name: Snyk Open Source monitor
-      ##run: snyk monitor --all-projects
-
-      
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
