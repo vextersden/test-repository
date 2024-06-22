@@ -3,7 +3,11 @@ on: push
 jobs:
   security:
     runs-on: ubuntu-latest
+    env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
     steps:
+    
     - uses: actions/checkout@master
     - uses: snyk/actions/setup@master        
     - name: Output Snyk code test
@@ -26,5 +30,4 @@ jobs:
     ##- name: Snyk Open Source monitor
       ##run: snyk monitor --all-projects
 
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      
