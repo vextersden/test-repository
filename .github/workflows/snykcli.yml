@@ -10,11 +10,12 @@ jobs:
       run: |
        snyk auth
        snyk code test --json-file-output=vuln.json 
-    - name: upload test result
+    - name: make directory
       run: |
        echo hello > path/to/artifact/world.txt
        mkdir -p path/to/artifact
-      
+    
+    - name: upload      
       uses: actions/upload-artifact@v4
       with:
         name: my-artifact
