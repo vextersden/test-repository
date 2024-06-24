@@ -8,12 +8,15 @@ jobs:
     - uses: snyk/actions/setup@master
         
     - name: Output Snyk code test
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+
       run: |
        snyk ignore --file-path=troubles && snyk ignore --file-path=performance
        snyk code test --json-file-output=path/to/artifact/vex.json
       continue-on-error: true
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      
     - name: upload
       run: |
         mkdir -p path/to/artifact
