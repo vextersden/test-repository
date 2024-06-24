@@ -7,9 +7,10 @@ jobs:
     - uses: actions/checkout@master
     - uses: snyk/actions/setup@master
     - name: ignore certain files
-      run: snyk ignore --file-path=performance && snyk ignore --file-path=troubles
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      run: snyk ignore --file-path=performance && snyk ignore --file-path=troubles
+      
         
     - name: Output Snyk code test
       run:  snyk code test --json-file-output=path/to/artifact/vex.json
