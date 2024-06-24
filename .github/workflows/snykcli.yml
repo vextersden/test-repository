@@ -10,8 +10,6 @@ jobs:
     - name: Output Snyk code test
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-
-
       run: |
        snyk ignore --file-path=troubles && snyk ignore --file-path=performance
        snyk code test --json-file-output=path/to/artifact/vex.json
@@ -22,7 +20,7 @@ jobs:
         mkdir -p path/to/artifact
         echo hello > path/to/artifact/world.txt
 
-    - name: execute upload with
+    - name: execute uploadwith
       uses: actions/upload-artifact@v4
       with:
         name: my-artifact
